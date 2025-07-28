@@ -4,7 +4,7 @@ WORKDIR /app
 
 # Copy necessary files
 COPY ./app ./app
-COPY ./model ./model
+COPY ./saved_models ./saved_models
 COPY ./requirements.txt .
 
 # Install system dependencies
@@ -17,10 +17,7 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 #Requirments
 RUN pip install --no-cache-dir -r requirements.txt
 
-#NLTK Data
-RUN python -m nltk.downloader punkt wordnet punkt_tab
 
-# Expose port and run the app
-EXPOSE 5000
+EXPOSE 7861
 
 CMD ["python", "app/app.py"]
