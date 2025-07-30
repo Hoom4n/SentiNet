@@ -1,4 +1,4 @@
-# SentiNet: Sentiment Analysis for IMDB Movie Reviews
+# SentiNet
   
 SentiNet is a sentiment analysis system powered by deep learning, built on the Large Movie Review Dataset (https://ai.stanford.edu/~amaas/data/sentiment/). This project leverages TensorFlow's data API for efficient data loading, implements custom sentence embeddings trained from scratch, and uses an MLP for classification. The model is developed with Keras, incorporating advanced training techniques like Nesterov optimization, kernel weight decay, dropout, early stopping, and exponential learning rate scheduling. The final model is ready for deployment with a Gradio web UI and Docker support for seamless installation.
 This project builds a sentiment analysis system using two core components: a custom TensorFlow Data API loader to process text reviews into a tf.data.Dataset, and a Keras-based pipeline for preprocessing, encoding, embedding, and classifying text reviews.
