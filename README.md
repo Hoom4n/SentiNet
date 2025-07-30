@@ -25,7 +25,7 @@ Comprehensive workflow covering everything from efficient streaming data ingesti
 
 ### Option 1: Online Demo
 
-You can try the online demo on HuggingFace Spaces: <a href="https://huggingface.co/spaces/hoom4n/SentiMDBd">https://huggingface.co/spaces/hoom4n/SentiMDB</a>
+You can try the online demo on HuggingFace Spaces: <a href="https://huggingface.co/spaces/hoom4n/SentiNet">https://huggingface.co/spaces/hoom4n/SentiNet</a>
 
 ### Option 2: Local Setup
 
