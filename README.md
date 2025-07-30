@@ -2,7 +2,7 @@
   
 SentiNet is a deep learning–based sentiment analysis system built on the Large Movie Review Dataset (https://ai.stanford.edu/~amaas/data/sentiment/). The project features a custom TensorFlow tf.data pipeline for efficient streaming of text data, along with a custom sentence embedding layer trained from scratch. Text reviews are processed and classified using a Keras-based MLP architecture, enhanced with advanced training techniques including Nesterov-accelerated optimization, kernel weight decay, dropout regularization, early stopping, and exponential learning rate scheduling.
 
-The pipeline is modular and fully end-to-end—from data loading and preprocessing to encoding, embedding, and classification. The final model is deployable via a Gradio web UI and includes Docker support for seamless, reproducible installation
+The pipeline is modular and fully end-to-end—from data loading and preprocessing to encoding, embedding, and classification. The final model is deployable via a Gradio web UI and includes Docker support for seamless, reproducible installation. Repo features a comperhensive <a href="https://nbviewer.org/github/hoom4n/SentiNet/blob/main/SentiNet.ipynb">Jupyter Notebook</a>
 
 ## ✅ End-to-End Sentiment Analysis Pipeline
 Comprehensive workflow covering everything from efficient streaming data ingestion and preprocessing to text encoding, model training, classification, and web-based deployment.
