@@ -1,14 +1,18 @@
 # SentiNet
   
-SentiNet is a sentiment analysis system powered by deep learning, built on the Large Movie Review Dataset (https://ai.stanford.edu/~amaas/data/sentiment/). This project leverages TensorFlow's data API for efficient data loading, implements custom sentence embeddings trained from scratch, and uses an MLP for classification. The model is developed with Keras, incorporating advanced training techniques like Nesterov optimization, kernel weight decay, dropout, early stopping, and exponential learning rate scheduling. The final model is ready for deployment with a Gradio web UI and Docker support for seamless installation.
-This project builds a sentiment analysis system using two core components: a custom TensorFlow Data API loader to process text reviews into a tf.data.Dataset, and a Keras-based pipeline for preprocessing, encoding, embedding, and classifying text reviews.
+SentiNet is a deep learning–based sentiment analysis system built on the Large Movie Review Dataset (https://ai.stanford.edu/~amaas/data/sentiment/). The project features a custom TensorFlow tf.data pipeline for efficient streaming of text data, along with a custom sentence embedding layer trained from scratch. Text reviews are processed and classified using a Keras-based MLP architecture, enhanced with advanced training techniques including Nesterov-accelerated optimization, kernel weight decay, dropout regularization, early stopping, and exponential learning rate scheduling.
 
+The pipeline is modular and fully end-to-end—from data loading and preprocessing to encoding, embedding, and classification. The final model is deployable via a Gradio web UI and includes Docker support for seamless, reproducible installation
 
 ## ✅ End-to-End Sentiment Analysis Pipeline
 Comprehensive workflow covering everything from efficient streaming data ingestion and preprocessing to text encoding, model training, classification, and web-based deployment.
 
-- **Optimized TensorFlow Data Pipeline**  
-  Built using TensorFlow's tf.data API, the pipeline supports automatic label inference from directory structure and improves training efficiency through prefetching, shuffling, and dynamic batching.
+- **High-Performance TensorFlow Data Pipeline**  
+  Built with a custom tf.data pipeline designed for large-scale text classification tasks. Automatically infers labels from directory structure, with dynamic support for training/validation splits. Optimized using parallel file reading, caching, shuffling, prefetching, and batching—resulting in a highly efficient and GPU-ready input pipeline. Key features include:
+  - *Label Inference via Directory Structure:* Automatically detects class labels from folder names without manual labeling.
+  - *Dynamic Train/Validation Split:* Enables easy experimentation with customizable splits using simple flags.
+  - *Memory-Efficient Streaming:* Utilizes AUTOTUNE, caching, and prefetching to minimize latency and maximize throughput.
+  - *Customizable Pipeline Parameters:* Offers full control over batch size, shuffle buffer, prefetch depth, and seed for reproducibility.
 - **Custom Sentence Embedding Layer with Pretraining**  
   Developed a custom Keras layer to compute sentence embeddings by averaging token embeddings, normalized by sentence length—enabling more stable and interpretable feature representations. Includes optional pretraining for enhanced embedding quality.
 - **Advanced Training Techniques**  
